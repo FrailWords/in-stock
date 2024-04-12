@@ -8,7 +8,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 function InventoryItemsDetails() {
   let itemID = useParams().id;
-  let inventoryURL = `https://in-stock-20-server-production.up.railway.app/inventories/item/${itemID}`;
+  let inventoryURL = `http://localhost:8080/inventories/item/${itemID}`;
 
   const [currentItem, setCurrentItem] = useState();
 

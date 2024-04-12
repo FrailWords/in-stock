@@ -141,7 +141,7 @@ function NewWarehouse() {
           email: warehouseDetails.email,
         };
         const response = await axios.post(
-          "https://in-stock-20-server-production.up.railway.app/warehouses/new",
+          "http://localhost:8080/warehouses/new",
           newWarehouse
         );
         setIsDisabled(true);

@@ -17,7 +17,7 @@ function InventoryPage() {
   }, [locationKey]);
   //api call
   const inventoriesAPIURL =
-    "https://in-stock-20-server-production.up.railway.app/inventories";
+    "http://localhost:8080/inventories";
   const [inventoriesData, setInventoriesData] = useState();
 
   useEffect(() => {

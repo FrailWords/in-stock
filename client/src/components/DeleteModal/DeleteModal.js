@@ -13,7 +13,7 @@ function DeleteModal({
   };
 
   const deleteHandler = () => {
-    let apiURL = `https://in-stock-20-server-production.up.railway.app/warehouses/${deleteWarehouse[1]}`;
+    let apiURL = `http://localhost:8080/warehouses/${deleteWarehouse[1]}`;
     axios
       .delete(apiURL)
       .then((res) => setWarehousesData(res.data))

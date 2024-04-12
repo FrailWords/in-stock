@@ -15,9 +15,9 @@ import ClipLoader from "react-spinners/ClipLoader";
 function WarehouseDetails() {
   const { warehouseID } = useParams();
 
-  let warehouseURL = `https://in-stock-20-server-production.up.railway.app/warehouses/${warehouseID}`;
+  let warehouseURL = `http://localhost:8080/warehouses/${warehouseID}`;
   const inventoriesAPIURL =
-    "https://in-stock-20-server-production.up.railway.app/inventories";
+    "http://localhost:8080/inventories";
 
   const [currentWarehouse, setCurrentWarehouse] = useState();
   // const [currentInventory, setCurrentInventory] = useState();

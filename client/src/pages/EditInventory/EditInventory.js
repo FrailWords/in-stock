@@ -28,7 +28,7 @@ function EditInventory() {
   //toasty
   const notify = (item) => toast.success(`${item} was updated successfully.`);
 
-  let inventoryURL = `https://in-stock-20-server-production.up.railway.app/inventories/item/${inventoryId}`;
+  let inventoryURL = `http://localhost:8080/inventories/item/${inventoryId}`;
 
   //get initial invetory data for the edit page
   useEffect(() => {
@@ -53,7 +53,7 @@ function EditInventory() {
     const getWarehouses = async () => {
       try {
         const response = await axios.get(
-          "https://in-stock-20-server-production.up.railway.app/warehouses"
+          "http://localhost:8080/warehouses"
         );
         setWarehouses(response.data);
       } catch (error) {
@@ -157,7 +157,7 @@ function EditInventory() {
           quantity: quantity,
         };
         const response = await axios.put(
-          `https://in-stock-20-server-production.up.railway.app/inventories/item/${inventoryId}`,
+          `http://localhost:8080/inventories/item/${inventoryId}`,
           updatedItem
         );
         setIsDisabled(true);

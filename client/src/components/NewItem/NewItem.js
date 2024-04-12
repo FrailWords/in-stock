@@ -59,7 +59,7 @@ const NewItem = () => {
     const getWarehouses = async () => {
       try {
         const response = await axios.get(
-          "https://in-stock-20-server-production.up.railway.app/warehouses"
+          "http://localhost:8080/warehouses"
         );
         setWarehouses(response.data);
         setItemDetails({
@@ -130,7 +130,7 @@ const NewItem = () => {
           quantity: quantity,
         };
         const response = await axios.post(
-          "https://in-stock-20-server-production.up.railway.app/inventories",
+          "http://localhost:8080/inventories",
           newItem
         );
         setIsDisabled(true);

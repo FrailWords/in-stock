@@ -8,7 +8,7 @@ import Warehouse from "../../components/Warehouse/Warehouse";
 
 function HomePage() {
   const warehousesAPIURL =
-    "https://in-stock-20-server-production.up.railway.app/warehouses";
+    "http://localhost:8080/warehouses";
   const [warehousesData, setWarehousesData] = useState(); //state for all warehouse list
 
   //using use location to update list if warehouse edited/deleted

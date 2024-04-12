@@ -27,7 +27,7 @@ function EditWarehouse() {
   //input disabled
   const [isdisabled, setIsDisabled] = useState(false);
 
-  let warehouseURL = `https://in-stock-20-server-production.up.railway.app/warehouses/${warehouseId}`;
+  let warehouseURL = `http://localhost:8080/warehouses/${warehouseId}`;
 
   useEffect(() => {
     axios.get(warehouseURL).then((response) => {
@@ -164,7 +164,7 @@ function EditWarehouse() {
         };
 
         const response = axios.put(
-          `https://in-stock-20-server-production.up.railway.app/warehouses/${warehouseId}`,
+          `http://localhost:8080/warehouses/${warehouseId}`,
           editedWarehouse
         );
         setIsDisabled(true);
